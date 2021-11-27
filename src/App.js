@@ -1,16 +1,9 @@
 import "./App.css";
-import Header from "./components/Header";
 import Genres from "./components/Genres";
 import Movies from "./components/Movies";
 import AllLatest from "./components/AllLatest";
 import AllTopRated from "./components/AllTopRated";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Switch,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (

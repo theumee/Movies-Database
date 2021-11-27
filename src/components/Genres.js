@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Movies from "./Movies";
+import { Link } from "react-router-dom";
+
 import Header from "./Header";
-import App from "../App";
 
 const Genres = () => {
-  const [selectedGenre, setSelectedGenre] = useState("");
+  // const [selectedGenre, setSelectedGenre] = useState("");
   const [genres, setGenres] = useState([]);
 
   useEffect(() => {

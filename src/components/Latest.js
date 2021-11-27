@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
-import { Link, Route } from "react-router-dom";
-import AllLatest from "./AllLatest";
+import { Link } from "react-router-dom";
 
 const Latest = () => {
   const imgPath = "https://image.tmdb.org/t/p/original";

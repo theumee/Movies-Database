@@ -29,7 +29,7 @@ const Movies = () => {
       setMovieKey(0);
     }
   };
-  if (upcoming == undefined) {
+  if (!upcoming) {
     return <div></div>;
   } else {
     return (
