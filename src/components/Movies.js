@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import Latest from "./Latest";
 import TopRated from "./TopRated";
+import axios from "axios";
 
 const Movies = () => {
   const [upcoming, setUpcoming] = useState();
@@ -14,17 +15,15 @@ const Movies = () => {
   }, []);
 
   const getUpcoming = async () => {
-    const res = await fetch(
+    const res = await axios.get(
       "https://api.themoviedb.org/3/movie/upcoming?api_key=2a5ddd483b8fe7de98ffe6f4c80de4cd&language=en-US&page=1"
     );
-    const json = await res.json();
-    console.log(json);
-    setUpcoming(json.results);
+    setUpcoming(res.data.results);
   };
 
   setTimeout(() => {
     nextSlide();
-  }, 5000);
+  }, 10000);
 
   const nextSlide = () => {
     if (movieKey < 9) {

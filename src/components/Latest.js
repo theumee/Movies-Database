@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Latest = () => {
   const imgPath = "https://image.tmdb.org/t/p/original";
@@ -10,11 +11,10 @@ const Latest = () => {
   }, []);
 
   const getLatest = async () => {
-    const res = await fetch(
+    const res = await axios.get(
       "https://api.themoviedb.org/3/movie/popular?api_key=2a5ddd483b8fe7de98ffe6f4c80de4cd&language=en-US&page=1"
     );
-    const json = await res.json();
-    setLatest(json.results.splice(1, 9));
+    setLatest(res.data.results.splice(1, 9));
   };
   return (
     <div>
