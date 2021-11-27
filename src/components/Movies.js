@@ -22,6 +22,10 @@ const Movies = () => {
     setUpcoming(json.results);
   };
 
+  setTimeout(() => {
+    nextSlide();
+  }, 5000);
+
   const nextSlide = () => {
     if (movieKey < 9) {
       setMovieKey(movieKey + 1);
