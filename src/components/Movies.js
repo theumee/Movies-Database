@@ -10,7 +10,6 @@ const Movies = () => {
   const imgPath = "https://image.tmdb.org/t/p/original";
 
   useEffect(() => {
-    console.log("hellp");
     getUpcoming();
   }, []);
 
